@@ -1,0 +1,139 @@
+body {
+    background-color: black
+    font-family: roboto;
+}
+
+.jumbotron {
+      background-color: rgba(0, 0, 0, 0.56);
+}
+
+#form {
+  width: 30%;
+  left: 50%;
+  margin-left: -15%;
+  margin-bottom: 30px;
+  color: white;
+  position: absolute;
+  min-height: 100%; 
+  z-index: 10;
+  visibility: hidden;
+}
+
+#form .form-control {
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid white;
+}
+
+#form .form-control:focus {
+    outline: none !important;
+    border:1px solid white;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+/*Placeholder Colors*/
+.form-control::-webkit-input-placeholder {
+color: rgba(100, 100, 100, 0.82);
+}
+.form-control:-moz-placeholder { /* Firefox 18- */
+color: rgba(100, 100, 100, 0.82);
+}
+ 
+.form-control::-moz-placeholder { /* Firefox 19+ */
+color: rgba(100, 100, 100, 0.82);
+}
+ 
+.form-control:-ms-input-placeholder {
+color: rgba(100, 100, 100, 0.82);
+}
+
+#shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  font-family: 'Saira Semi Condensed', sans-serif;
+  color: white;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.90);
+  visibility: hidden;
+}
+
+.row {
+  margin: 10px;
+  padding: 0;
+}
+
+
+.col-6 {
+  padding: 0px;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+.jumbotron h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 56px;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  padding-bottom: 20px;
+}
+
+.jumbotron p {
+  font-family: 'Saira Semi Condensed', sans-serif;
+}
+
+form > button {
+  margin-top: 30px;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('../img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}

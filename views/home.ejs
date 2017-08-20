@@ -1,0 +1,63 @@
+<% include partials/header %>
+	<div class="fullscreen-bg">
+    	<video loop muted autoplay poster="/img/videoframe.jpg" class="fullscreen-bg__video">
+        	<source src="/video/luxx.mp4" type="video/mp4">
+    	</video>
+	</div>
+
+	<div id="shadow">
+		<p>Please fill in the form bellow to begin a conversation about your project.</p>
+
+		<form id="form" action="https://formspree.io/e.fraser3@gmail.com" method="POST">
+			<div class="row justify-content-start">
+    			<div class="col-6">
+      				<input type="text" class="form-control" name="First name" placeholder="First name" required="required">
+    			</div>
+    			<div class="col-6">
+      				<input type="text" class="form-control" name="Last name" placeholder="Last name" required="required">
+    			</div>
+  			</div>
+
+  			<div class="row justify-content-center">
+  				<input type="text" class="form-control col-12" name="Company" placeholder="Company name" required="required">
+  			</div>
+
+  			<div class="row justify-content-center">
+  				<input type="email" class="form-control col-12" name="Email"placeholder="Email adress" required="required">
+  			</div>
+
+  			<div class="row justify-content-center">
+  				<textarea type="text" class="form-control col-12" name="Message" placeholder="Project description" rows="5" required="required"></textarea>
+  			</div>
+
+ 			<div class="row justify-content-end">
+    			<div class="col-6">
+      				<input type="text" class="form-control" id="budget" name="Budget" placeholder="Budget" required="required" oninput="setCustomValidity('')" 
+      				oninvalid="this.setCustomValidity('Please enter a budget. It helps us get an idea of the services we will be able to deliver.')">
+    			</div>
+  			</div>
+
+			<button type="submit" value="Send" class="btn btn-success">Submit</button>
+			<input type="hidden" name="_next" value="http://localhost:8000/thanks" />
+			<input type="hidden" name="_subject" value="Luxx Contact Form Submission" />
+		</form>
+	</div>
+
+	<div class="container" id="jumbotron">
+		<div class="jumbotron">
+			<h1>Luxx.Video</h1>
+			<p>The North West's premier creative video house</p>
+			<button type="button" class="btn btn-outline-secondary" onclick="showForm()">Get in touch!</button>
+		</div>
+	</div>
+
+	<script>
+		function showForm() {
+			console.log("Button clicked!");
+    		document.getElementById("shadow").style.visibility = "visible";
+    		document.getElementById("form").style.visibility = "visible";
+    		document.getElementById("jumbotron").style.visibility = "hidden";
+		}
+	</script>
+
+<% include partials/footer %>
